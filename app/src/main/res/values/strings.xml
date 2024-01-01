@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RouteContactsApp</string>
+    <string name="name_hint">Name</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="description_hint">Description</string>
+    <string name="add_photo_button">Add Photo</string>
+    <string name="add_contact_button">add Contact</string>
+</resources>
