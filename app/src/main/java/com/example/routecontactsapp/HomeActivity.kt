@@ -39,9 +39,9 @@ class HomeActivity : AppCompatActivity() {
         initContactDialog()
         contactsAdapter = ContactsAdapter(contacts)
         contactsAdapter.onContactClick = object : ContactsAdapter.OnContactClick{
-            override fun onClick(view: View) {
+            override fun onClick(contact: Contact, position:Int) {
                 val intent = Intent(this@HomeActivity, ContactDetailsActivity::class.java)
-                intent.putExtra("contact", contact)
+                intent.putExtra("contact", contacts[position])
                 startActivity(intent)
             }
 

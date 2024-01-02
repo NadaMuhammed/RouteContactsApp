@@ -27,7 +27,7 @@ class ContactsAdapter(var contacts: ArrayList<Contact>) :
         holder.name.text = contacts[position].name
         holder.phone.text = contacts[position].phone
         holder.itemView.setOnClickListener { view ->
-            onContactClick.onClick(view)
+            onContactClick.onClick(contacts[position], position)
         }
     }
 
@@ -36,7 +36,7 @@ class ContactsAdapter(var contacts: ArrayList<Contact>) :
     }
 
     interface OnContactClick {
-        fun onClick(view: View)
+        fun onClick(contact: Contact, position: Int)
     }
 
 }
